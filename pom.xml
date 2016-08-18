@@ -12,6 +12,11 @@
     <name>Point Processor</name>
     <description>Simple tools package for processing points</description>
     <url>http://dev.morecraft.xyz</url>
+    <inceptionYear>2015</inceptionYear>
+    <organization>
+        <name>MoreCraft</name>
+        <url>http://morecraft.xyz</url>
+    </organization>
 
     <licenses>
         <license>
@@ -22,8 +27,26 @@
     </licenses>
 
     <scm>
+        <connection>scm:git@github.com:EmhyrVarEmreis/PointProcessor.git</connection>
+        <developerConnection>scm:git@github.com:EmhyrVarEmreis/PointProcessor.git</developerConnection>
         <url>https://github.com/EmhyrVarEmreis/PointProcessor</url>
     </scm>
+
+    <developers>
+        <developer>
+            <id>mateusz.stefaniak</id>
+            <name>Mateusz Stefaniak</name>
+            <email>mateusz.stefaniak@morecraft.pl</email>
+            <url>http://mateuszstefaniak.me</url>
+            <organization>MoreCraft</organization>
+            <organizationUrl>http://morecraft.xyz</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Warsaw</timezone>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>1.8</java.version>
@@ -52,6 +75,19 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

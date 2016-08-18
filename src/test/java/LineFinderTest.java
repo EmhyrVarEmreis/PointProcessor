@@ -1,8 +1,8 @@
 
 import org.junit.Test;
-import xyz.morecraft.dev.tool.pointproccessor.LineFinder;
-import xyz.morecraft.dev.tool.pointproccessor.model.Line;
-import xyz.morecraft.dev.tool.pointproccessor.model.Point;
+import xyz.morecraft.dev.tool.pointprocessor.LineFinder;
+import xyz.morecraft.dev.tool.pointprocessor.model.Line;
+import xyz.morecraft.dev.tool.pointprocessor.model.Point;
 
 import java.util.ArrayList;
 import java.util.List;

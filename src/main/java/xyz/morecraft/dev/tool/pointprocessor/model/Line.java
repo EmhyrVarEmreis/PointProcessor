@@ -1,4 +1,4 @@
-package xyz.morecraft.dev.tool.pointproccessor.model;
+package xyz.morecraft.dev.tool.pointprocessor.model;
 
 import java.util.ArrayList;
 

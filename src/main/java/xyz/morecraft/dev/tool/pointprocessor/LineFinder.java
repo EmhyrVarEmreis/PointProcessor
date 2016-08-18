@@ -1,7 +1,7 @@
-package xyz.morecraft.dev.tool.pointproccessor;
+package xyz.morecraft.dev.tool.pointprocessor;
 
-import xyz.morecraft.dev.tool.pointproccessor.model.Line;
-import xyz.morecraft.dev.tool.pointproccessor.model.Point;
+import xyz.morecraft.dev.tool.pointprocessor.model.Line;
+import xyz.morecraft.dev.tool.pointprocessor.model.Point;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +50,7 @@ public class LineFinder {
 
         p2 = new Point();
 
-        for (PointTranslation.Direction d : PointTranslation.Direction.values()) {
+        for (Direction d : Direction.values()) {
             if (p2 == null) {
                 return null;
             }
@@ -82,44 +82,44 @@ public class LineFinder {
             case 0:
                 l = new Line(m[0], m[2]);
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.N))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.N))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.S))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.S))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 break;
             case 1:
                 l = new Line(m[1], m[3]);
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.W))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.W))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.E))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.E))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 break;
             case 2:
                 l = new Line(m[4], m[6]);
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.NE))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.NE))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.SW))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.SW))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 break;
             case 3:
                 l = new Line(m[5], m[7]);
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.NW))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.NW))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 p2 = new Point(p.x, p.y);
-                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, PointTranslation.Direction.SE))) != null) {
+                while (this.pointsToProcess.get((p2 = PointTranslation.transformed(p2, Direction.SE))) != null) {
                     this.pointsToProcess.put(p2, false);
                 }
                 break;
